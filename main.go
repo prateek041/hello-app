@@ -6,10 +6,12 @@ import (
 	"net/http"
 )
 
+func mainHandler(rw http.ResponseWriter, r *http.Request) {
+	fmt.Fprintf(rw, "Hello this is the base route")
+}
+
 func main() {
-	http.HandleFunc("/", func(rw http.ResponseWriter, r *http.Request) {
-		fmt.Fprintf(rw, "Hello this is the base route")
-	})
+	http.HandleFunc("/", mainHandler)
 
 	err := http.ListenAndServe(":8080", nil)
 
