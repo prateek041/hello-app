@@ -7,7 +7,7 @@ import (
 )
 
 func mainHandler(rw http.ResponseWriter, r *http.Request) {
-	fmt.Fprintf(rw, "Hello world")
+	fmt.Fprintf(rw, "Hello world this is testing")
 }
 
 func main() {
@@ -16,6 +16,6 @@ func main() {
 	err := http.ListenAndServe(":8080", nil)
 
 	if err != nil {
-		log.Fatal("Error in starting the server")
+		log.Fatal("Error in starting the server", err)
 	}
 }
