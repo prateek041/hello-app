@@ -1,0 +1,1 @@
+# A demo application to demonstrate the CI CD pipeline
