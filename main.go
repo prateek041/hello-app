@@ -18,7 +18,7 @@ func main() {
 	http.HandleFunc("/", mainHandler)
 	http.HandleFunc("/second", secondaryHandler)
 
-	err := http.ListenAndServe(":8081", nil)
+	err := http.ListenAndServe(":8080", nil)
 
 	if err != nil {
 		log.Fatal("Error in starting the server", err)
