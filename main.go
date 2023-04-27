@@ -7,7 +7,7 @@ import (
 )
 
 func mainHandler(rw http.ResponseWriter, r *http.Request) {
-	fmt.Fprintf(rw, "Hello this is the base route")
+	fmt.Fprintf(rw, "Hello world")
 }
 
 func main() {
